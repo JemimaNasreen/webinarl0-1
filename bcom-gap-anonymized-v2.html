@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Course Name] — Career Growth Masterclass (Portfolio Sample)</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark1: rgb(4,18,37);
+  --dark2: rgb(7,27,53);
+  --hero1: rgb(7,17,31);
+  --hero2: rgb(2,8,20);
+  --gold: rgb(255,204,63);
+  --gold-dark: rgb(214,171,45);
+  --gold-light: rgb(247,216,109);
+  --white: rgb(255,255,255);
+  --muted: rgb(212,216,223);
+  --card-bg: rgba(18,31,56,0.85);
+  --card-border: rgba(255,255,255,0.08);
+  --green: rgb(105,255,188);
+  --red: rgb(255,127,127);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:var(--dark1);color:var(--white);}
+.wrap{max-width:1300px;margin:0 auto;padding:0 6%;}
+.tag{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:15px;text-transform:uppercase;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  background:linear-gradient(90deg, rgba(230,190,85,1) 0%, rgba(246,226,123,1) 50%, rgba(205,157,55,1) 100%);
+  color:#000;font-family:'Poppins',sans-serif;font-weight:800;font-size:18px;
+  padding:18px 34px;border-radius:8px;border:none;cursor:pointer;text-decoration:none;
+  transition:transform .2s ease;
+}
+.btn:hover{transform:translateY(-2px);}
+.center{text-align:center;}
+section{padding:90px 0;}
+
+/* PORTFOLIO BANNER */
+.portfolio-banner{background:var(--gold);color:#000;text-align:center;font-size:13px;font-weight:700;padding:8px;letter-spacing:.02em;}
+
+/* HERO */
+.hero-section{
+  min-height:100vh;padding:60px 5%;
+  background: radial-gradient(circle at right top, rgba(255,204,63,0.15), transparent 30%), linear-gradient(135deg, var(--hero1), var(--hero2));
+  display:flex;align-items:center;
+}
+.hero-container{
+  max-width:1400px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1.1fr 400px 280px;gap:30px;align-items:center;
+}
+.hero-left{background:rgb(7,23,39);border-radius:25px;padding:40px;text-align:center;}
+.hero-badge{
+  display:inline-block;border:1px solid var(--gold-dark);color:var(--gold);
+  border-radius:50px;padding:14px;font-size:14px;font-weight:700;margin-bottom:25px;
+}
+.hero-left h1{font-family:'Poppins',sans-serif;font-size:80px;line-height:.95;font-weight:900;margin-bottom:20px;}
+.hero-left h1 span{color:var(--gold);}
+.hero-left h2{font-size:30px;line-height:1.2;font-weight:800;margin-bottom:20px;}
+.hero-left p{font-size:15px;line-height:1.6;color:#b8c0cb;margin-bottom:25px;}
+.hero-info{margin-top:25px;display:flex;justify-content:center;gap:30px;font-weight:600;}
+.hero-speaker{width:100%;}
+.hero-speaker .avatar-box{
+  width:100%;aspect-ratio:3/4;border-radius:20px;
+  background:linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:900;color:var(--hero2);
+}
+.authority-panel{display:flex;flex-direction:column;gap:20px;}
+.experience-card{
+  background:linear-gradient(135deg, rgb(200,156,30), rgb(246,211,101));
+  border-radius:20px;padding:25px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+.experience-card h2{font-size:65px;line-height:1;color:#000;font-weight:900;}
+.experience-card p{color:#000;font-size:18px;font-weight:700;margin-top:5px;}
+.featured-card{background:var(--dark1);border:1px solid var(--gold-dark);border-radius:20px;padding:20px;}
+.featured-title{color:var(--gold);font-weight:800;text-align:center;margin-bottom:15px;letter-spacing:1px;font-size:20px;}
+.logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.logo-item{background:rgb(11,35,64);color:#fff;border-radius:10px;padding:14px;text-align:center;font-size:12px;font-weight:700;}
+.authority-card{background:var(--dark1);border-radius:15px;padding:20px;border-left:4px solid var(--gold);}
+.authority-card ul{list-style:none;}
+.authority-card li{color:#fff;margin-bottom:12px;font-size:14px;font-weight:600;}
+
+/* FRUSTRATION */
+.frustration-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.frustration-container{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center;}
+.frustration-left h2{font-family:'Poppins',sans-serif;font-size:70px;line-height:.95;font-weight:900;margin-bottom:40px;}
+.frustration-points{display:flex;flex-direction:column;gap:18px;}
+.frustration-point{display:flex;align-items:center;gap:15px;font-size:20px;font-weight:600;}
+.frustration-point .icon{color:var(--gold);font-size:24px;}
+.frustration-right h3{font-size:42px;line-height:1.15;font-weight:900;font-style:italic;margin-bottom:35px;}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:35px;}
+.problem-box{background:rgb(17,38,74);border:1px solid var(--gold-dark);border-radius:22px;padding:22px;text-align:center;font-size:20px;font-weight:700;}
+.missing-title{color:var(--gold);font-size:56px;font-weight:900;text-align:center;margin-bottom:25px;font-family:'Poppins',sans-serif;}
+.truth-text{max-width:800px;margin:0 auto;text-align:center;font-size:24px;line-height:1.4;color:var(--muted);font-weight:600;}
+
+/* HIDDEN GAP / COMPARISON */
+.hidden-gap-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.hidden-gap-title,.difference-title,.attend-title,.roadmap-title,.walkaway-title,.future-title,.nochange-title,.mentor-title{
+  font-family:'Poppins',sans-serif;font-size:60px;line-height:.95;font-weight:900;margin-bottom:25px;
+}
+.hidden-gap-subtitle,.difference-subtitle,.attend-subtitle,.roadmap-subtitle,.walkaway-subtitle,.future-subtitle,.nochange-subtitle,.mentor-subtitle{
+  font-size:20px;line-height:1.6;color:var(--muted);max-width:800px;margin-bottom:60px;
+}
+.comparison-wrapper{display:grid;grid-template-columns:1fr 100px 1fr;gap:20px;align-items:center;margin-bottom:50px;}
+.candidate-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:20px;padding:30px;}
+.candidate-title{font-size:30px;font-weight:800;margin-bottom:25px;}
+.common-box{background:rgba(255,255,255,.05);border-radius:10px;padding:14px 16px;margin-bottom:12px;font-size:15px;color:var(--muted);}
+.positive-item{color:var(--green);margin-bottom:14px;font-size:17px;font-weight:600;}
+.negative-item{color:var(--red);margin-bottom:14px;font-size:17px;font-weight:600;}
+.result-hired{margin-top:25px;background:linear-gradient(135deg, rgb(15,77,72), rgb(20,108,95));padding:18px;text-align:center;border-radius:12px;font-size:20px;font-weight:800;color:var(--green);}
+.result-rejected{margin-top:25px;background:linear-gradient(135deg, rgb(82,35,52), rgb(107,41,63));padding:18px;text-align:center;border-radius:12px;font-size:20px;font-weight:800;color:var(--red);}
+.vs-circle{width:80px;height:80px;border:2px solid var(--gold-dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:var(--gold);margin:0 auto;}
+.gap-box{background:rgba(255,255,255,.03);border:1px solid rgba(214,171,45,.4);border-radius:20px;padding:40px;}
+.gap-box p{font-size:20px;line-height:1.7;margin-bottom:20px;color:var(--muted);}
+.gap-box .highlight{color:var(--gold);font-weight:800;}
+.gap-box .final-line{color:var(--gold);font-size:24px;font-weight:900;margin-top:15px;}
+
+/* DIFFERENCE CARDS */
+.difference-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));text-align:center;}
+.difference-container{max-width:1300px;margin:0 auto;}
+.difference-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-bottom:60px;}
+.difference-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:20px;padding:35px 25px;text-align:left;transition:.3s;}
+.difference-card:hover{transform:translateY(-5px);border-color:var(--gold-dark);}
+.card-number{font-family:'Poppins',sans-serif;font-size:64px;font-weight:900;color:var(--gold);margin-bottom:20px;}
+.card-title{font-size:26px;font-weight:800;margin-bottom:15px;}
+.card-description{font-size:16px;line-height:1.6;color:var(--muted);}
+.lessons-box{max-width:900px;margin:0 auto;background:rgba(255,255,255,.03);border:1px solid rgba(214,171,45,.4);border-radius:20px;padding:40px;}
+.lessons-box p{font-size:24px;line-height:1.8;color:#fff;margin-bottom:20px;}
+.highlight{color:var(--gold);font-weight:800;}
+
+/* ATTEND GRID */
+.attend-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.attend-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.attend-card{background:var(--card-bg);border:1px solid var(--card-border);border-left:4px solid var(--gold);border-radius:18px;padding:30px;transition:.3s;}
+.attend-card:hover{transform:translateY(-5px);border-color:var(--gold);}
+.attend-card h3{font-size:28px;font-weight:800;margin-bottom:12px;}
+.attend-card p{font-size:16px;line-height:1.6;color:var(--muted);}
+.attend-card.full-width{grid-column:1/-1;}
+.attend-card.full-width h3{color:var(--gold);}
+
+/* ROADMAP / TIMELINE */
+.roadmap-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.roadmap-container{max-width:1200px;margin:0 auto;text-align:center;}
+.timeline{position:relative;max-width:900px;margin:0 auto;padding-left:90px;text-align:left;}
+.timeline::before{content:"";position:absolute;left:35px;top:20px;bottom:20px;width:2px;background:rgba(255,204,63,.5);}
+.timeline-item{position:relative;margin-bottom:28px;}
+.timeline-number{position:absolute;left:-90px;top:18px;width:48px;height:48px;border-radius:50%;background:var(--gold);color:#000;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;}
+.timeline-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:18px;padding:28px 30px;transition:.3s;}
+.timeline-card:hover{border-color:var(--gold);}
+.timeline-card h3{font-size:26px;font-weight:800;margin-bottom:12px;}
+.timeline-card p{font-size:16px;color:var(--muted);line-height:1.6;}
+.final-box{max-width:1000px;margin:70px auto 0;background:rgba(255,255,255,.03);border:1px solid rgba(255,204,63,.35);border-radius:20px;padding:45px;text-align:center;}
+.final-box h3{color:var(--gold);font-size:36px;font-weight:900;margin-bottom:20px;}
+.final-box p{font-size:20px;line-height:1.7;}
+
+/* WALKAWAY */
+.walkaway-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.walkaway-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:60px;}
+.walkaway-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:18px;padding:25px;display:flex;gap:18px;align-items:flex-start;transition:.3s;}
+.walkaway-card:hover{border-color:var(--gold);transform:translateY(-3px);}
+.check-icon{width:34px;height:34px;min-width:34px;border-radius:50%;border:1px solid rgba(255,204,63,.5);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:900;}
+.walkaway-card h3{font-size:22px;font-weight:800;margin-bottom:10px;}
+.walkaway-card p{font-size:15px;color:var(--muted);line-height:1.6;}
+.future-box{max-width:1100px;margin:0 auto;background:rgba(255,255,255,.03);border:1px solid rgba(255,204,63,.35);border-radius:22px;padding:50px;text-align:center;}
+.future-box h3{font-size:36px;color:var(--gold);font-weight:900;margin-bottom:20px;}
+.future-box p{font-size:20px;line-height:1.8;}
+
+/* FUTURE CARDS */
+.future-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));text-align:center;}
+.future-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:70px;}
+.future-card{position:relative;height:340px;border-radius:22px;overflow:hidden;background:linear-gradient(135deg, rgb(17,38,74), rgb(11,25,50));display:flex;align-items:flex-end;}
+.future-content{position:relative;padding:25px;text-align:left;z-index:2;}
+.future-content h3{font-size:28px;font-weight:800;line-height:1.1;margin-bottom:12px;}
+.future-content p{font-size:15px;line-height:1.6;color:#e2e6ec;}
+.future-lines{max-width:950px;margin:0 auto;}
+.future-lines p{font-size:22px;line-height:1.8;margin-bottom:20px;}
+.future-highlight{color:var(--gold);font-weight:900;font-size:26px;margin-top:20px;}
+
+/* NO CHANGE / CONSEQUENCE */
+.nochange-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.nochange-title{max-width:900px;}
+.consequence-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-bottom:70px;}
+.consequence-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:18px;padding:30px 20px;text-align:center;transition:.3s;}
+.consequence-card:hover{transform:translateY(-5px);border-color:var(--gold);}
+.plus-year{color:var(--gold);font-size:44px;font-weight:900;margin-bottom:20px;font-family:'Poppins',sans-serif;}
+.consequence-card p{font-size:15px;color:var(--muted);line-height:1.6;}
+.impact-box{max-width:1100px;margin:0 auto;background:rgba(255,255,255,.03);border:1px solid rgba(255,204,63,.35);border-radius:24px;padding:55px;text-align:center;}
+.impact-box h3{font-size:44px;font-weight:900;line-height:1.1;margin-bottom:30px;}
+.impact-highlight{color:var(--gold);}
+.impact-box p{max-width:900px;margin:0 auto;font-size:20px;line-height:1.8;color:var(--muted);}
+
+/* MENTOR */
+.mentor-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.mentor-content{display:grid;grid-template-columns:400px 1fr;gap:50px;align-items:center;}
+.mentor-avatar-box{position:relative;width:100%;aspect-ratio:3/4;border-radius:22px;background:linear-gradient(135deg, var(--gold-dark), var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:70px;font-weight:900;color:var(--hero2);}
+.mentor-name-tag{position:absolute;left:20px;right:20px;bottom:20px;background:rgba(0,0,0,.75);padding:20px;border-radius:14px;}
+.mentor-name-tag h3{font-size:26px;font-weight:900;margin-bottom:5px;}
+.mentor-name-tag p{color:var(--gold);font-size:14px;font-weight:700;}
+.mentor-info h3{font-size:36px;line-height:1.2;margin-bottom:25px;font-weight:900;}
+.mentor-info p{font-size:17px;line-height:1.8;color:var(--muted);margin-bottom:20px;}
+.mentor-highlights{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:35px 0;}
+.highlight-card{background:var(--card-bg);border:1px solid var(--card-border);border-left:4px solid var(--gold);border-radius:15px;padding:18px;}
+.highlight-card span{color:var(--gold);font-size:12px;font-weight:800;display:block;margin-bottom:5px;}
+.highlight-card strong{font-size:16px;}
+.featured-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,204,63,.35);border-radius:20px;padding:30px;margin-top:25px;}
+.featured-box h4{color:var(--gold);font-size:20px;margin-bottom:20px;font-weight:800;}
+.featured-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.featured-item{background:rgb(13,39,68);padding:15px;border-radius:10px;text-align:center;font-size:13px;font-weight:700;}
+.mentor-quote{margin-top:30px;font-size:22px;font-weight:700;color:var(--gold);line-height:1.5;text-align:center;}
+
+/* FINAL CTA */
+.final-cta-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.final-cta-box{max-width:1100px;margin:0 auto;background:rgba(255,255,255,.03);border:1px solid rgba(255,204,63,.35);border-radius:24px;padding:70px 50px;text-align:center;position:relative;overflow:hidden;}
+.final-cta-title{font-family:'Poppins',sans-serif;font-size:56px;font-weight:900;line-height:.95;margin-bottom:30px;}
+.final-cta-title span{color:var(--gold);}
+.final-cta-box p{font-size:20px;line-height:1.8;color:var(--muted);margin-bottom:15px;}
+.final-cta-highlight{color:var(--gold);font-weight:800;}
+.price-box{margin:40px auto 30px;display:inline-block;background:linear-gradient(135deg, var(--gold-dark), var(--gold-light));color:#000;padding:18px 35px;border-radius:16px;font-size:38px;font-weight:900;font-family:'Poppins',sans-serif;}
+.final-tagline{margin-top:25px;font-size:20px;color:var(--gold);font-weight:700;}
+
+/* FAQ */
+.faq-section{background:linear-gradient(135deg, var(--dark1), var(--dark2));}
+.faq-header{text-align:center;margin-bottom:60px;}
+.faq-header h2{font-family:'Poppins',sans-serif;font-size:52px;line-height:.95;font-weight:900;margin-bottom:20px;}
+.faq-header p{font-size:18px;color:var(--muted);max-width:700px;margin:0 auto;}
+.faq-container{max-width:1000px;margin:0 auto;}
+.faq-accordion{display:flex;flex-direction:column;gap:18px;}
+.faq-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:20px;transition:.3s;}
+.faq-item:hover{border-color:rgba(255,204,63,.35);}
+.faq-question{position:relative;display:block;padding:26px 90px 26px 28px;cursor:pointer;font-size:19px;font-weight:700;list-style:none;}
+.faq-question::-webkit-details-marker{display:none;}
+.faq-question::after{content:"+";color:var(--gold);font-size:26px;font-weight:900;position:absolute;right:22px;top:50%;transform:translateY(-50%);}
+.faq-item[open] .faq-question::after{content:"×";}
+.faq-answer{padding:0 28px 26px;font-size:16px;line-height:1.7;color:var(--muted);}
+.footnote{font-size:13px;color:#8f9aa8;max-width:900px;margin:40px auto 0;text-align:center;line-height:1.6;}
+
+/* FINAL BAR */
+.final-bar{background:var(--dark2);border-top:3px solid var(--gold-dark);padding:24px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.final-bar h2{font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;}
+.final-bar h2 span{color:var(--gold);}
+.final-bar .meta{font-size:14px;color:var(--muted);margin-top:6px;}
+
+@media(max-width:1000px){
+  .hero-container{grid-template-columns:1fr;}
+  .hero-left h1{font-size:56px;}
+  .frustration-container{grid-template-columns:1fr;}
+  .difference-cards,.attend-grid,.walkaway-grid,.future-grid{grid-template-columns:1fr;}
+  .comparison-wrapper{grid-template-columns:1fr;}
+  .consequence-grid{grid-template-columns:1fr 1fr;}
+  .mentor-content{grid-template-columns:1fr;}
+  .featured-logos{grid-template-columns:1fr 1fr;}
+  .hidden-gap-title,.difference-title,.attend-title,.roadmap-title,.walkaway-title,.future-title,.nochange-title,.mentor-title{font-size:38px;}
+  .final-cta-title{font-size:36px;}
+}
+</style>
+</head>
+<body>
+
+<div class="portfolio-banner">PORTFOLIO SAMPLE — anonymized rebuild. Brand, mentor identity, photos &amp; product name replaced with placeholders.</div>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-left">
+      <div class="hero-badge">• LIVE CAREER GROWTH MASTERCLASS</div>
+      <h1>THE<br><span>[COURSE]</span><br>GAP</h1>
+      <h2>Why Your Degree Isn't Getting You Hired<br>And What Employers Actually Want</h2>
+      <p>A Live Career Growth Masterclass For [Target Graduate] Graduates, Junior [Field] Professionals &amp; Career Switchers</p>
+      <div class="hero-info">
+        <span>⏱ 90 Minutes</span><span>🟡 Live Online</span><span>Language: [Language]</span>
+      </div>
+      <a href="#register" class="btn">Reserve My Seat</a>
+    </div>
+    <div class="hero-speaker">
+      <div class="avatar-box">[M]</div>
+    </div>
+    <div class="authority-panel">
+      <div class="experience-card">
+        <h2>30+</h2>
+        <p>Years of Experience</p>
+      </div>
+      <div class="featured-card">
+        <div class="featured-title">FEATURED IN</div>
+        <div class="logo-grid">
+          <div class="logo-item">[Publication A]</div>
+          <div class="logo-item">[Publication B]</div>
+          <div class="logo-item">[Publication C]</div>
+          <div class="logo-item">[Publication D]</div>
+        </div>
+      </div>
+      <div class="authority-card">
+        <ul>
+          <li>Founder – [Academy Name]</li>
+          <li>[Role] – [Company]</li>
+          <li>Trustee – [Trust]</li>
+          <li>[Specialty] Coach</li>
+          <li>[Specialty] Expert</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRUSTRATION -->
+<section class="frustration-section">
+  <div class="wrap frustration-container">
+    <div class="frustration-left">
+      <div class="tag">The Real Frustration</div>
+      <h2>You Did<br>Everything<br>Right.</h2>
+      <div class="frustration-points">
+        <div class="frustration-point"><span class="icon">✔</span>Completed your [Degree]</div>
+        <div class="frustration-point"><span class="icon">✔</span>You passed your exams.</div>
+        <div class="frustration-point"><span class="icon">✔</span>You earned your degree.</div>
+      </div>
+    </div>
+    <div class="frustration-right">
+      <h3>Yet you're still struggling to get the opportunities you expected.</h3>
+      <div class="problem-grid">
+        <div class="problem-box">No Callbacks</div>
+        <div class="problem-box">Low Salary</div>
+        <div class="problem-box">Others Moving Ahead</div>
+        <div class="problem-box">You're Stuck</div>
+      </div>
+      <div class="missing-title">"What Am I Missing?"</div>
+      <div class="truth-text">The truth is, your degree isn't the problem. Employers are looking for something colleges never taught you. And until you understand what that is, your career will keep moving slower than it should.</div>
+    </div>
+  </div>
+  <div class="center" style="margin-top:50px;"><a href="#register" class="btn">Show Me What I'm Missing</a></div>
+</section>
+
+<!-- HIDDEN GAP -->
+<section class="hidden-gap-section">
+  <div class="wrap">
+    <div class="tag">The Hidden Gap</div>
+    <h2 class="hidden-gap-title">Same Degree.<br>Different Outcome.</h2>
+    <p class="hidden-gap-subtitle">Two candidates apply for the same role. Same degree. Same marks. One gets hired. One doesn't.</p>
+    <div class="comparison-wrapper">
+      <div class="candidate-card">
+        <div class="candidate-title">Candidate A</div>
+        <div class="common-box">✓ [Degree] Degree</div>
+        <div class="common-box">✓ Same Marks</div>
+        <div class="positive-item">✓ Opens core software confidently</div>
+        <div class="positive-item">✓ Handles day-to-day tasks independently</div>
+        <div class="positive-item">✓ Explains process clearly</div>
+        <div class="positive-item">✓ Ready from Day One</div>
+        <div class="result-hired">HIRED</div>
+      </div>
+      <div class="vs-circle">VS</div>
+      <div class="candidate-card">
+        <div class="candidate-title">Candidate B</div>
+        <div class="common-box">✓ [Degree] Degree</div>
+        <div class="common-box">✓ Same Marks</div>
+        <div class="negative-item">✕ Knows theory only</div>
+        <div class="negative-item">✕ No practical exposure</div>
+        <div class="negative-item">✕ No software confidence</div>
+        <div class="negative-item">✕ Needs training</div>
+        <div class="result-rejected">REJECTED</div>
+      </div>
+    </div>
+    <div class="gap-box">
+      <p>Employers don't have time to train. They need someone who can contribute from <span class="highlight">Day One.</span></p>
+      <p>That gap between theory and real-world readiness is exactly what this masterclass is about.</p>
+      <div class="final-line">And it's a gap you can close faster than you think.</div>
+    </div>
+    <div class="center" style="margin-top:40px;"><a href="#register" class="btn">Reserve My Seat</a></div>
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section class="difference-section">
+  <div class="difference-container">
+    <div class="tag">Why Graduates Get Stuck</div>
+    <h2 class="difference-title">The Difference Isn't<br>The Degree.</h2>
+    <p class="difference-subtitle" style="margin-left:auto;margin-right:auto;">Every year, thousands of graduates enter the job market with the same qualification. The difference isn't the degree. It's what happens after the degree.</p>
+    <div class="difference-cards">
+      <div class="difference-card"><div class="card-number">01</div><div class="card-title">Skills Employers Value</div><div class="card-description">Understand the practical skills hiring managers actually look for when selecting candidates.</div></div>
+      <div class="difference-card"><div class="card-number">02</div><div class="card-title">Interview Confidence</div><div class="card-description">Build the confidence to communicate your value clearly before and during interviews.</div></div>
+      <div class="difference-card"><div class="card-number">03</div><div class="card-title">Career Positioning</div><div class="card-description">Learn how to position yourself for better opportunities and faster career growth.</div></div>
+    </div>
+    <div class="lessons-box">
+      <p>Most professionals discover these lessons <span class="highlight">after years of struggle.</span></p>
+      <p>In this masterclass, <span class="highlight">you'll discover them in 90 minutes.</span></p>
+    </div>
+    <div style="margin-top:40px;"><a href="#register" class="btn">Save My Spot Today</a></div>
+  </div>
+</section>
+
+<!-- ATTEND -->
+<section class="attend-section">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:60px;">
+      <div class="tag">Who Should Attend</div>
+      <h2 class="attend-title">If You're Here,<br>This Is For You.</h2>
+      <p class="attend-subtitle" style="margin:0 auto;">Whether you're starting your career, trying to grow faster, or finding your way back, this masterclass is designed to help you move forward.</p>
+    </div>
+    <div class="attend-grid">
+      <div class="attend-card"><h3>Fresh Graduates</h3><p>Struggling to get interview calls or land your first role in the field.</p></div>
+      <div class="attend-card"><h3>Junior Professionals</h3><p>Earning below market rate and unsure how to move to the next level.</p></div>
+      <div class="attend-card"><h3>Career Switchers</h3><p>You studied this field but ended up elsewhere and want to return.</p></div>
+      <div class="attend-card"><h3>Final-Year Students</h3><p>Want to become job-ready before graduation instead of scrambling after.</p></div>
+      <div class="attend-card full-width"><h3>Growth-Oriented Professionals</h3><p>Want a clear roadmap to build a long-term career with better salary opportunities and future growth.</p></div>
+    </div>
+    <div class="center" style="margin-top:50px;"><a href="#register" class="btn">Reserve My Seat</a></div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap-section">
+  <div class="roadmap-container">
+    <div class="tag">In This Masterclass You'll Discover</div>
+    <h2 class="roadmap-title">Your Career Growth Roadmap</h2>
+    <p class="roadmap-subtitle" style="margin:0 auto 60px;">Everything employers wish graduates already knew before applying.</p>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-number">1</div><div class="timeline-card"><h3>The Real Reason Graduates Get Rejected</h3><p>Understand what employers actually evaluate before making a hiring decision.</p></div></div>
+      <div class="timeline-item"><div class="timeline-number">2</div><div class="timeline-card"><h3>The 3 Career Gaps</h3><p>Discover the hidden gaps keeping graduates unemployed, underpaid, or overlooked.</p></div></div>
+      <div class="timeline-item"><div class="timeline-number">3</div><div class="timeline-card"><h3>The 5 Skills Employers Value</h3><p>Learn the practical capabilities that make companies see you as an asset rather than a training cost.</p></div></div>
+      <div class="timeline-item"><div class="timeline-number">4</div><div class="timeline-card"><h3>Career Acceleration Framework</h3><p>See how professionals grow faster without wasting years learning through trial and error.</p></div></div>
+      <div class="timeline-item"><div class="timeline-number">5</div><div class="timeline-card"><h3>The Career Roadmap Schools Never Teach</h3><p>Understand the path from graduate level to becoming a confident professional.</p></div></div>
+    </div>
+    <div class="final-box"><h3>And Most Importantly...</h3><p>You'll finally understand what employers actually want — and how to position yourself as the candidate they choose.</p></div>
+    <div style="margin-top:40px;"><a href="#register" class="btn">Join The Masterclass</a></div>
+  </div>
+</section>
+
+<!-- WALKAWAY -->
+<section class="walkaway-section">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:60px;">
+      <div class="tag">What You'll Walk Away With</div>
+      <h2 class="walkaway-title">Leave With More Than<br>Just Information</h2>
+      <p class="walkaway-subtitle" style="margin:0 auto;">By the end of this masterclass, you'll know exactly what needs to change and what steps to take next.</p>
+    </div>
+    <div class="walkaway-grid">
+      <div class="walkaway-card"><div class="check-icon">✓</div><div><h3>Career Clarity</h3><p>Understand why your current approach isn't producing the results you expected.</p></div></div>
+      <div class="walkaway-card"><div class="check-icon">✓</div><div><h3>Skill Priorities</h3><p>Identify the skills that deserve your immediate attention and effort.</p></div></div>
+      <div class="walkaway-card"><div class="check-icon">✓</div><div><h3>Employer Insights</h3><p>Gain a clear understanding of what employers actually look for before hiring.</p></div></div>
+      <div class="walkaway-card"><div class="check-icon">✓</div><div><h3>Mistake Avoidance</h3><p>Learn how to avoid the common career mistakes that slow down growth.</p></div></div>
+      <div class="walkaway-card"><div class="check-icon">✓</div><div><h3>Next Steps</h3><p>Walk away with practical actions you can start implementing immediately.</p></div></div>
+      <div class="walkaway-card"><div class="check-icon">✓</div><div><h3>12-Month Roadmap</h3><p>Follow a structured path toward becoming a confident professional.</p></div></div>
+    </div>
+    <div class="future-box"><h3>Your Next 12 Months Can Look Very Different</h3><p>Instead of guessing what employers want, you'll leave with a practical roadmap that shows exactly where to focus, what to learn, and how to accelerate your career growth.</p></div>
+    <div class="center" style="margin-top:40px;"><a href="#register" class="btn">Start Building That Future</a></div>
+  </div>
+</section>
+
+<!-- FUTURE -->
+<section class="future-section">
+  <div class="wrap">
+    <div class="tag">Imagine 12 Months From Now</div>
+    <h2 class="future-title">Your Future Doesn't Have To<br>Look Like Your Present</h2>
+    <p class="future-subtitle" style="margin:0 auto 60px;">Imagine walking into interviews with confidence. Imagine knowing exactly what employers expect. Imagine having practical skills that make you stand out.</p>
+    <div class="future-grid">
+      <div class="future-card"><div class="future-content"><h3>Interview With Confidence</h3><p>Walk into interviews knowing exactly what employers expect.</p></div></div>
+      <div class="future-card"><div class="future-content"><h3>Stand Out With Skills</h3><p>Build practical capabilities that make employers notice you.</p></div></div>
+      <div class="future-card"><div class="future-content"><h3>Unlock Better Opportunities</h3><p>Create a career path that reflects your effort and potential.</p></div></div>
+    </div>
+    <div class="future-lines">
+      <p>Imagine being recognised for your capabilities instead of just your degree.</p>
+      <p>Imagine earning a salary that reflects your effort and potential.</p>
+      <div class="future-highlight">This masterclass is designed to help you move toward that future.</div>
+    </div>
+    <div style="margin-top:40px;"><a href="#register" class="btn">Reserve My Seat</a></div>
+  </div>
+</section>
+
+<!-- NO CHANGE -->
+<section class="nochange-section">
+  <div class="wrap">
+    <div class="tag">If Nothing Changes</div>
+    <h2 class="nochange-title">The Next Year Will<br>Look Exactly Like The<br>Last One.</h2>
+    <p class="nochange-subtitle">Most graduates aren't stuck because they lack potential. They're stuck because they keep repeating the same approach and expecting a different outcome.</p>
+    <div class="consequence-grid">
+      <div class="consequence-card"><div class="plus-year">+1</div><p>One more year earning below your potential.</p></div>
+      <div class="consequence-card"><div class="plus-year">+1</div><p>One more year sending applications without results.</p></div>
+      <div class="consequence-card"><div class="plus-year">+1</div><p>One more year watching others move ahead.</p></div>
+      <div class="consequence-card"><div class="plus-year">+1</div><p>One more year feeling unsure about your future.</p></div>
+      <div class="consequence-card"><div class="plus-year">+1</div><p>One more year hoping things improve on their own.</p></div>
+    </div>
+    <div class="impact-box">
+      <h3>The Cost Of Staying Stuck <span class="impact-highlight">Is Far Greater</span> Than The Cost Of Learning What Needs To Change.</h3>
+      <p>A year from now, you'll wish you had started sooner. The question isn't whether your career will change. The question is whether you'll be the reason it changes.</p>
+    </div>
+    <div class="center" style="margin-top:40px;"><a href="#register" class="btn">Reserve My Seat</a></div>
+  </div>
+</section>
+
+<!-- MENTOR -->
+<section class="mentor-section">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:60px;">
+      <div class="tag">Meet Your Mentor</div>
+      <h2 class="mentor-title">Learn From Someone Who Has Seen What Actually Works</h2>
+      <p class="mentor-subtitle" style="margin:0 auto;">30+ years helping professionals and businesses make better career and financial decisions.</p>
+    </div>
+    <div class="mentor-content">
+      <div>
+        <div class="mentor-avatar-box">
+          [M]
+          <div class="mentor-name-tag">
+            <h3>[Mentor Name]</h3>
+            <p>[Credential] • [Specialty] Coach • [Specialty] Expert</p>
+          </div>
+        </div>
+      </div>
+      <div class="mentor-info">
+        <h3>Why Thousands Trust Their Advice</h3>
+        <p>For over three decades, [Mentor Name] has worked at the intersection of this field, business growth, and professional development.</p>
+        <p>As a [Credential], [Specialty] Coach, Founder of [Academy Name], [Role] of [Company], and Trustee of [Trust], they have spent years helping professionals bridge the gap between qualifications and real-world success.</p>
+        <p>Their mission is simple: to help aspiring professionals become job-ready, employer-ready, and future-ready.</p>
+        <div class="mentor-highlights">
+          <div class="highlight-card"><span>FOUNDER</span><strong>[Academy Name]</strong></div>
+          <div class="highlight-card"><span>[ROLE]</span><strong>[Company]</strong></div>
+          <div class="highlight-card"><span>TRUSTEE</span><strong>[Trust]</strong></div>
+          <div class="highlight-card"><span>EXPERTISE</span><strong>[Specialty Area]</strong></div>
+        </div>
+        <div class="featured-box">
+          <h4>Featured In</h4>
+          <div class="featured-logos">
+            <div class="featured-item">[Publication A]</div>
+            <div class="featured-item">[Publication B]</div>
+            <div class="featured-item">[Publication C]</div>
+            <div class="featured-item">[Publication D]</div>
+          </div>
+        </div>
+        <div class="mentor-quote">"If you understand what employers value, your career path becomes much clearer."</div>
+      </div>
+    </div>
+    <div class="center" style="margin-top:40px;"><a href="#register" class="btn">Learn From [Mentor Name]</a></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="register" class="final-cta-section">
+  <div class="wrap">
+    <div class="final-cta-box">
+      <h2 class="final-cta-title">Stop Guessing.<br><span>Start Growing.</span></h2>
+      <p>Most graduates spend years trying to figure out what employers actually want.</p>
+      <p>This session will show you in <span class="final-cta-highlight">90 minutes.</span></p>
+      <p>The bonus resources alone can save you months of confusion, wrong decisions, and wasted effort.</p>
+      <p>For less than the cost of a weekend outing, you'll gain clarity that can impact your career for years.</p>
+      <div class="price-box">₹[XXX] ONLY</div><br>
+      <a href="#" class="btn">Reserve My Seat</a>
+      <div class="final-tagline">Because your career deserves more than guesswork.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="wrap">
+    <div class="faq-header">
+      <div class="tag" style="text-align:center;">Frequently Asked Questions</div>
+      <h2>Questions Before<br>You Register?</h2>
+      <p>Everything you need to know before joining the masterclass.</p>
+    </div>
+    <div class="faq-container">
+      <div class="faq-accordion">
+        <details class="faq-item"><summary class="faq-question">Who is this masterclass for?</summary><div class="faq-answer">Graduates, junior professionals, students, career switchers, and professionals who want to grow.</div></details>
+        <details class="faq-item"><summary class="faq-question">I'm a beginner. Will this be useful for me?</summary><div class="faq-answer">Yes — it's designed to show you exactly what employers expect and what steps to take next.</div></details>
+        <details class="faq-item"><summary class="faq-question">Will this help me get a job?</summary><div class="faq-answer">It won't guarantee a job, but it will show you why candidates get rejected and how to stand out.</div></details>
+        <details class="faq-item"><summary class="faq-question">I'm already working. Is this still relevant?</summary><div class="faq-answer">Yes — if you're earning below your potential, this will help you identify your next growth steps.</div></details>
+        <details class="faq-item"><summary class="faq-question">How long is the masterclass?</summary><div class="faq-answer">Approximately 90 minutes with practical insights, career frameworks, and actionable guidance.</div></details>
+        <details class="faq-item"><summary class="faq-question">What do I get for the registration fee?</summary><div class="faq-answer">Live masterclass access, employer insights, career frameworks, and bonus resources to avoid costly mistakes.</div></details>
+        <details class="faq-item"><summary class="faq-question">Will there be a recording?</summary><div class="faq-answer">Yes — registered participants will receive access details after the session.</div></details>
+        <details class="faq-item"><summary class="faq-question">What should I do after registering?</summary><div class="faq-answer">Check your confirmation, join the community group for updates, and attend live for maximum value.</div></details>
+      </div>
+    </div>
+    <p class="footnote">This is a portfolio recreation built to demonstrate funnel copy &amp; structure. Client name, logo, imagery, and product name have been anonymized/replaced with placeholders.</p>
+  </div>
+</section>
+
+<!-- FINAL BAR -->
+<div class="final-bar">
+  <div>
+    <h2>Your Degree Got You Here. <span>The Right Skills Will Take You Further.</span></h2>
+    <div class="meta">90 Minutes • Live Online • ₹[XXX]</div>
+  </div>
+  <a href="#register" class="btn">Reserve My Seat</a>
+</div>
+
+</body>
+</html>
